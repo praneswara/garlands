@@ -1,0 +1,380 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  background: linear-gradient(to right, rgb(147, 201, 211), rgb(136, 153, 199));
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-form button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: #555;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: relative;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 200px;
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+}
+.dropdown-menu a:hover {
+  background-color: #f8f9fa;
+}
+
+.cart-items {
+  width: 250px;
+}
+
+.offcanvas {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.offcanvas-header {
+  background: linear-gradient(to right, rgb(147, 201, 211), rgb(136, 153, 199));
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Carousel Container */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px; /* Adjust as needed */
+  margin: auto;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: opacity 1.6s ease-in-out;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 350px;
+  display: block;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+}
+
+.navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar-nav .nav-link {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #e9ecef;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 200px; /* Adjust as needed */
+}
+
+.dropdown-menu .dropdown-item {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #e9ecef;
+}
+
+/* Show Dropdown on Hover */
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+/* Product Container Styles */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center cards horizontally */
+  padding: 20px;
+}
+
+/* Card Styles */
+.card {
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(25% - 20px); /* 4 cards per row considering the gap */
+  transition: box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin: 0 0 10px;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #333;
+  margin: 0 0 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-outline-dark {
+  color: #333;
+  border-color: #333;
+  background: transparent;
+}
+
+.btn-outline-dark:hover {
+  background-color: #333;
+  color: #fff;
+}
+.content {
+  padding-bottom: 60px; /* Height of the footer */
+}
+
+/* Footer Styles */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, rgb(147, 201, 211), rgb(136, 153, 199));
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  gap: 15px;
+}
+
+.footer nav ul li {
+  margin: 0;
+}
+
+.footer nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .footer nav ul {
+    flex-direction: column;
+  }
+  
+  .footer nav ul li {
+    margin-bottom: 5px;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .card {
+    width: calc(33.333% - 20px); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 900px) {
+  .card {
+    width: calc(50% - 20px); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: calc(100% - 20px); /* 1 card per row */
+  }
+}
